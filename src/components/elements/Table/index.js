@@ -1,11 +1,12 @@
 import React from 'react';
+import Proptypes from 'prop-types';
+import classNames from 'classnames';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableContainer from '@mui/material/TableContainer';
-import classNames from 'classnames';
 import './Table.scss';
 
 const MaterialTable = ({
@@ -63,6 +64,16 @@ const MaterialTable = ({
 
 MaterialTable.defaultProps = {
   minWidth: '',
+  selectedId: '',
+  onSelectContact: () => {},
+};
+
+MaterialTable.propTypes = {
+  columns: Proptypes.arrayOf(Object).isRequired,
+  rows: Proptypes.arrayOf(Object).isRequired,
+  minWidth: Proptypes.number,
+  selectedId: Proptypes.string,
+  onSelectContact: Proptypes.func,
 };
 
 export default MaterialTable;

@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import classNames from 'classnames';
 import MaterialTextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -59,8 +60,29 @@ TextField.defaultProps = {
   helperText: '',
   position: '',
   symbol: null,
+  value: '',
+  multiline: false,
+  maxRows: '',
   onBlur: () => {},
   onChange: () => {},
+};
+
+TextField.propTypes = {
+  name: Proptypes.string,
+  label: Proptypes.string,
+  type: Proptypes.string,
+  placeholder: Proptypes.string,
+  variant: Proptypes.string,
+  fullWidth: Proptypes.bool,
+  error: Proptypes.bool,
+  helperText: Proptypes.string,
+  position: Proptypes.string,
+  symbol: Proptypes.element,
+  value: Proptypes.string.isRequired,
+  multiline: Proptypes.bool,
+  maxRows: Proptypes.string,
+  onBlur: Proptypes.func,
+  onChange: Proptypes.func,
 };
 
 export default TextField;

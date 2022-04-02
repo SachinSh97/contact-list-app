@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import './Avatar.scss';
 
 const Avatar = ({ name, color }) => {
@@ -19,6 +20,16 @@ const Avatar = ({ name, color }) => {
       {renderText(name)}
     </div>
   );
+};
+
+Avatar.defaultProps = {
+  name: '',
+  color: '',
+};
+
+Avatar.propTypes = {
+  name: Proptypes.string,
+  color: Proptypes.string,
 };
 
 export default Avatar;
