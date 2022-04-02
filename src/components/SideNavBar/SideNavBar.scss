@@ -3,7 +3,7 @@
 $root: '.side-nav-bar';
 
 #{$root} {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   height: 100%;
@@ -11,17 +11,19 @@ $root: '.side-nav-bar';
   flex-direction: column;
   align-items: center;
   z-index: 1;
-  background-color: rgb(226, 108, 30);
-  background-image: linear-gradient(rgb(226, 108, 30), rgb(233, 101, 167));
+  background-image: linear-gradient(
+    $primary-theme-color,
+    $secondary-theme-color
+  );
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: calc($small-device-width - 1px)) {
     display: none;
   }
 
   .logo {
-    color: #fff;
-    margin-bottom: 24px;
-    height: 50px;
+    color: $seconday-svg-color;
+    margin-bottom: 1.71em;
+    height: 3.57em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,11 +39,11 @@ $root: '.side-nav-bar';
 
     .items {
       position: relative;
-      padding: 20px;
+      padding: 1.14em;
       cursor: pointer;
 
       svg {
-        color: #fff;
+        color: $seconday-svg-color;
       }
 
       &.active:after {
@@ -49,10 +51,10 @@ $root: '.side-nav-bar';
         position: absolute;
         top: 0;
         left: 0;
-        width: 4px;
+        width: 0.28em;
         height: 100%;
-        background-color: #fff;
-        border-radius: 10px;
+        background-color: $primary-bg-color;
+        border-radius: 0.71em;
       }
     }
   }

@@ -3,12 +3,13 @@
 $root: '.contact-list';
 
 #{$root} {
-  margin: 50px 0 0 60px;
-  padding: 40px;
+  margin: 3.57em 0 0 4.28em;
+  padding: 2.85em;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: calc($small-device-width - 1px)) {
     margin-left: 0;
-    padding: 40px 20px;
+    padding: 2.85em 1.42em;
+    width: 100%;
   }
 
   &_header {
@@ -17,11 +18,11 @@ $root: '.contact-list';
     justify-content: flex-start;
 
     .logo {
-      width: 30px;
+      width: 2.14em;
       svg {
         width: 100%;
         height: 100%;
-        color: #e66875;
+        color: $primary-svg-color;
       }
     }
 
@@ -29,37 +30,61 @@ $root: '.contact-list';
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-left: 14px;
+      margin-left: 1em;
 
       .title {
-        font-size: 24px;
+        font-size: 1.71rem;
         font-weight: 600;
         letter-spacing: 0.5px;
-        color: black;
+        color: $ternary-text-color;
       }
 
       .description {
-        font-size: 14px;
+        font-size: 1rem;
         font-weight: 400;
         letter-spacing: 0.5px;
-        color: #7b7b7b;
+        color: $secondary-text-color;
       }
     }
   }
 
   &_content {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    margin-top: 24px;
-    @media screen and (min-width: 426px) {
-      margin-left: 32px;
+    margin-top: 1.71em;
+    @media screen and (min-width: $small-device-width) {
+      margin: 2.28em 2.28em 0;
+    }
+
+    &_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1.71em;
+      width: 100%;
+      @include horizontally-spaced-out(1.71em);
+    }
+
+    &_contacts {
+      flex: 1.5;
+      width: 100%;
+      @media screen and (max-width: $small-device-width) {
+        margin-right: 0 !important;
+      }
+    }
+    &_contact-details {
+      flex: 1;
+      @media screen and (max-width: $small-device-width) {
+        margin-left: 0 !important;
+        margin-top: 1.42em;
+      }
     }
 
     &_actions {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      @include horizontally-spaced-out(10px);
+      @include horizontally-spaced-out(0.71em);
     }
   }
 }

@@ -1,0 +1,44 @@
+@import '../../../global/style/variables', '../../../global/style/mixins';
+
+$root: '.contact-table';
+
+#{$root} {
+  .user {
+    display: flex;
+    align-items: center;
+    @include horizontally-spaced-out(0.35em);
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &_name {
+      font-size: 1.28rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    &_email {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: $secondary-text-color;
+    }
+
+    &_company {
+      font-size: 1.14rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    &_action {
+      svg {
+        width: 1.28em;
+        height: 1.28em;
+        color: $primary-svg-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

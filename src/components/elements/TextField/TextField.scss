@@ -4,17 +4,22 @@ $root: '.material-textfield';
 
 #{$root} {
   .MuiInputBase-root {
-    border-radius: 50px;
-    background-color: #7b7b7b24;
-    color: #000;
+    border-radius: 3.57em;
+    background-color: $secondary-bg-color;
+    color: $ternary-text-color;
     line-height: 1.29;
   }
+  &.error {
+    .MuiInputBase-root {
+      background-color: $error-bg-color;
+    }
+  }
   .MuiInputBase-input {
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.5px;
     line-height: 2;
-    padding: 12px 24px;
+    padding: 0.85em 1.71em;
   }
 
   .MuiFormHelperText-contained {
@@ -24,18 +29,13 @@ $root: '.material-textfield';
   .MuiFormHelperText-root.Mui-error {
     font-size: 0.71rem;
     font-weight: 400;
-    color: #d0021b;
+    color: $error-text-color;
+    margin-left: 1.6em;
   }
 
   .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
   .MuiOutlinedInput-root:hover fieldset,
   .MuiOutlinedInput-notchedOutline {
     border: none;
-  }
-
-  .MuiOutlinedInput-root.Mui-error {
-    .MuiOutlinedInput-notchedOutline {
-      background-color: #f6ebe8;
-    }
   }
 }

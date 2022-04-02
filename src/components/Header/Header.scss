@@ -8,18 +8,18 @@ $root: '.header';
   right: 0;
   left: 0;
   z-index: 1;
-  height: 50px;
-  background: #fff;
-  box-shadow: 00 7px 9px 0 rgba(0, 0, 0, 0.1);
+  height: 3.57em;
+  background: $primary-bg-color;
+  box-shadow: $header-box-shadow;
 
   svg {
-    color: #e66875;
-    width: 28px;
-    height: 28px;
-    margin: 10px;
+    color: $primary-svg-color;
+    width: 2em;
+    height: 2em;
+    margin: 0.71em;
     cursor: pointer;
 
-    @media screen and (min-width: 426px) {
+    @media screen and (min-width: $small-device-width) {
       display: none;
     }
   }

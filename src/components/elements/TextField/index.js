@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import MaterialTextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import './TextField.scss';
@@ -6,6 +7,7 @@ import './TextField.scss';
 const TextField = ({
   name,
   label,
+  type,
   value,
   placeholder,
   variant,
@@ -14,20 +16,25 @@ const TextField = ({
   fullWidth,
   position,
   symbol,
+  multiline,
+  maxRows,
   onBlur,
   onChange,
 }) => {
   return (
     <MaterialTextField
-      classes={{ root: 'material-textfield' }}
+      classes={{ root: classNames('material-textfield', { error }) }}
       name={name}
       label={label}
+      type={type}
       value={value}
       placeholder={placeholder}
       variant={variant}
       error={error}
       helperText={helperText}
       fullWidth={fullWidth}
+      multiline={multiline}
+      maxRows={maxRows}
       InputProps={
         symbol && {
           [`${position}Adornment`]: (
@@ -44,6 +51,7 @@ const TextField = ({
 TextField.defaultProps = {
   name: '',
   label: '',
+  type: 'text',
   placeholder: '',
   variant: 'outlined',
   fullWidth: true,

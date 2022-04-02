@@ -4,10 +4,13 @@ $root: '.material-button';
 
 #{$root} {
   &.MuiButton-root {
-    font-size: 12px;
-    width: 230px;
-    padding: 10px 12px;
+    font-size: 0.85rem;
+    width: 19.17em;
+    padding: 0.83em 1em;
     white-space: nowrap;
-    background-image: linear-gradient(rgb(226, 108, 30), rgb(233, 101, 167));
+    background-image: linear-gradient(
+      $primary-theme-color,
+      $secondary-theme-color
+    );
   }
 }

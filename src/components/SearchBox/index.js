@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { debouncing } from '../../utils/helper';
-import './SearchBox.scss';
 
 const TextField = React.lazy(() => import('../elements/TextField'));
 

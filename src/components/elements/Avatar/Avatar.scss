@@ -1,0 +1,17 @@
+@import '../../../global/style/variables';
+
+$root: '.avatar';
+
+#{$root} {
+  font-size: 1.28rem;
+  width: 2.77em;
+  height: 2.77em;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-color);
+  color: $primary-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}

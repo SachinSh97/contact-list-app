@@ -1,0 +1,37 @@
+@import '../../../global/style/variables';
+
+$root: '.material-table';
+
+#{$root} {
+  &_header {
+    &.MuiTableHead-root {
+      background-color: $secondary-bg-color;
+    }
+    &_cell {
+      &.MuiTableCell-root {
+        font-size: 1.14rem;
+        font-weight: 400;
+        color: $secondary-text-color;
+      }
+    }
+  }
+
+  &_body {
+    &_row {
+      &.MuiTableRow-root {
+        &.selected {
+          background: $select-bg-color;
+        }
+
+        &:hover {
+          background: $hover-bg-color;
+        }
+      }
+    }
+    &_cell {
+      &.MuiTableCell-root {
+        border: none;
+      }
+    }
+  }
+}
