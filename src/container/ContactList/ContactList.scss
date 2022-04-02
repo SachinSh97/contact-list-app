@@ -1,0 +1,65 @@
+@import '../../global/style/variables', '../../global/style/mixins';
+
+$root: '.contact-list';
+
+#{$root} {
+  margin: 50px 0 0 60px;
+  padding: 40px;
+
+  @media screen and (max-width: 425px) {
+    margin-left: 0;
+    padding: 40px 20px;
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logo {
+      width: 30px;
+      svg {
+        width: 100%;
+        height: 100%;
+        color: #e66875;
+      }
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 14px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: black;
+      }
+
+      .description {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #7b7b7b;
+      }
+    }
+  }
+
+  &_content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 24px;
+    @media screen and (min-width: 426px) {
+      margin-left: 32px;
+    }
+
+    &_actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      @include horizontally-spaced-out(10px);
+    }
+  }
+}

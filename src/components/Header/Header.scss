@@ -1,0 +1,26 @@
+@import '../../global/style/variables';
+
+$root: '.header';
+
+#{$root} {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 50px;
+  background: #fff;
+  box-shadow: 00 7px 9px 0 rgba(0, 0, 0, 0.1);
+
+  svg {
+    color: #e66875;
+    width: 28px;
+    height: 28px;
+    margin: 10px;
+    cursor: pointer;
+
+    @media screen and (min-width: 426px) {
+      display: none;
+    }
+  }
+}

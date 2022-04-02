@@ -1,0 +1,13 @@
+@import '../../../global/style/variables';
+
+$root: '.material-button';
+
+#{$root} {
+  &.MuiButton-root {
+    font-size: 12px;
+    width: 230px;
+    padding: 10px 12px;
+    white-space: nowrap;
+    background-image: linear-gradient(rgb(226, 108, 30), rgb(233, 101, 167));
+  }
+}
